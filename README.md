@@ -1,4 +1,4 @@
-# Teste Técnico Java (Projeto AUTONOMY BASE)
+# Desafio Técnico Java - Projeto Autonomy Base
 
 ## Avisos antes de começar
 
@@ -76,43 +76,50 @@ Atente-se a cumprir a maioria dos requisitos, pois você pode cumprir-los parcia
 
 ## Objetivo do Desafio
 
-Manipulação de dados relacionais e não relacionais, com foco em testes, qualidade de código e padrões arquiteturais.
+Avaliar conhecimentos práticos em:
 
-## Requisitos Técnicos
-
-* Java 17+
-* Spring Boot
-* MySQL
-* MongoDB
-* JUnit / Mockito
-* Git
-* CI/CD
-* Clean Code
+* Java com Spring Boot
+* MySQL / PostgreSQL / Oracle e MongoDB
+* Testes unitários
 * Design Patterns
-* Noções de redes
+* Clean Code
+* Git e CI/CD
+* Redes e Integrações via API REST
+* Frontend com Angular
 
 ## Desafio
 
-Desenvolver um sistema de cadastro e consulta de registros mistos.
+Criar uma aplicação web de monitoramento de dispositivos conectados à rede.
 
-### Funcionalidades obrigatórias
+### Funcionalidades
 
-1. Entidade relacional: Cliente (armazenado em MySQL)
+* Cadastro de dispositivos com nome, IP e status (ativo/inativo)
+* Histórico de status salvo no Banco de Dados de sua escolha
+* Consulta dos últimos 10 status por dispositivo
+* Painel de visualização dos dispositivos em tempo real (simulado)
 
-   * id, nome, email, telefone
-2. Entidade documental: Log de acesso do cliente (armazenado no MongoDB)
+### Requisitos Técnicos - Backend
 
-   * id, clienteId, dataHora, origemAcesso, tipo
-3. Endpoint para registrar acesso
-4. Endpoint para buscar cliente com seus acessos recentes (ex: últimos 5)
-5. Testes unitários para os services e repositórios
+* Java 17+ com Spring Boot
+* Banco relacional (MySQL) para cadastro de dispositivos
+* MongoDB para histórico de status
+* Agendador de verificação de status de IPs (simulado com ping)
+* Testes unitários com JUnit
+* Padrões de projeto aplicados (Builder, Strategy, etc.)
+* API RESTful bem definida
 
-### Diferenciais
+### Requisitos Técnicos - Frontend
 
-* Testes de integração
-* Docker Compose com MySQL e Mongo
-* CI automatizando testes
-* Swagger com descrição
+* Angular 15+ ou 20
+* Visualização dos dispositivos com status atual
+* Histórico em gráfico ou tabela simples
+* Componente de busca e filtro por nome ou IP
+* Consumo da API REST
+
+### DevOps
+
+* Dockerfile para backend e frontend
+* Docker Compose com MySQL, MongoDB, backend e frontend
 
 ## Entrega
 
@@ -133,3 +140,5 @@ Desenvolver um sistema de cadastro e consulta de registros mistos.
 * https://martinfowler.com/articles/microservices.html
 * https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing
 * https://refactoring.guru
+
+Boa sorte! 🍀
